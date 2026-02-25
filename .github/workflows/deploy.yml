@@ -22,6 +22,8 @@ jobs:
 
       - name: Install dependencies
         run: uv sync
+        working-directory: notes
 
       - name: Deploy
         run: uv run mkdocs gh-deploy --force
+        working-directory: notes
