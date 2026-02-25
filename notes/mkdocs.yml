@@ -2,3 +2,16 @@ site_name: My Notes
 
 theme:
   name: material
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Agents.md: agents.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
