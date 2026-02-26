@@ -47,7 +47,8 @@ Copyright &copy; 2026 Tins P Joseph. All rights reserved.
 nav = [
    { "Get started" = "index.md" },
    { "Agents" = "agents/index.md" },
-   {"Database" = "database/index.md"  }
+   {"Database" = "database/index.md"  },
+   {"Server" = "server/index.md"  }
 
 ]
 
