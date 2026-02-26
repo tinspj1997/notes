@@ -2,10 +2,16 @@
 
 <div class="grid cards" markdown>
 
--   
-    [**Agents**](agents/index.md)
-
+- [**Agents**](agents/index.md)
+  
     ---
-    Agents Documentations and guidelines for the project.
+  
+    Agents documentation and guidelines for the project.
+    
+- [**Database**](database/index.md)
+  
+    ---
+  
+    Database documentation and guidelines for the project.
 
 </div>
