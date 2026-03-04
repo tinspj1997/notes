@@ -13,10 +13,16 @@
     ---
   
     Database documentation and guidelines for the project.
+
+- [**Logging**](logging/index.md)
+  
+    ---
+
+    Loguru logging setup and examples.
     
 - [**Server**](server/index.md)
   
     ---
   
-    Database documentation and guidelines for the project.
+    Server documentation and guidelines for the project.
 </div>
