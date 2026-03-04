@@ -72,6 +72,7 @@ Call `setup_logging()` early in your application start-up. Example:
 
 ```python
 from loguru import setup_logging
+from loguru import logger
 
 setup_logging()
 logger.info("Logging started")
