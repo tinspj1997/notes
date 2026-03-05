@@ -1,4 +1,9 @@
 # Git commit message agent
+
+### Sample prompt
+---
+
+``````shell
 ---
 description: 'Commit Message Agent'
 tools: ['execute/getTerminalOutput', 'execute/runInTerminal', 'search/changes']
@@ -24,3 +29,5 @@ Follow these rules strictly:
 4. **Output**:
    - Provide only the commit message in a markdown code block.
    - Follow with a brief "Reasoning" section explaining why you chose that type and description based on the `+` and `-` signs in the diff.
+
+``````

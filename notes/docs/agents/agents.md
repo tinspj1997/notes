@@ -1,5 +1,10 @@
 # Agents.md
 
+### Sample prompt
+---
+
+``````shell
+
 ## Project Overview
 
 A producer-consumer architecture built with **FastAPI** and **Loguru** for structured logging. The producer generates tasks and the consumer processes them. The application supports multiple deployment environments (development, QA, production) via Docker.
@@ -60,3 +65,5 @@ Fix all reported issues before considering the task complete. Do not skip this s
 - [ ] Repository functions have the decorator and `session` as the last param
 - [ ] `uv run ruff check .` passes with no errors
 - [ ] No direct DB calls outside the repository layer
+
+``````
