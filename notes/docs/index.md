@@ -25,4 +25,10 @@
     ---
   
     Server documentation and guidelines for the project.
+
+- [**Prompt**](prompt/index.md)
+  
+    ---
+  
+    Prompt documentation and guidelines for the project.
 </div>
