@@ -19,6 +19,7 @@ from agno.agent import Agent
 from agno.models.openai.like import OpenAILike
 
 
+from src.core.artifacts.constants.default import Default
 from src.core.artifacts.tools.chat import fetch_context
 from src.core.utils.prompt import read_prompt
 from agno.db.redis import RedisDb
@@ -31,9 +32,9 @@ redis_db = RedisDb(
 )
 
 model = OpenAILike(
-    id="chat-agent-model",
-    api_key="key",
-    base_url="endpoint",
+    id=Default.QUERY_MODEL_NAME,
+    api_key=Default.MODEL_API_KEY,
+    base_url=Default.MODEL_API_ENDPOINT,
 )
 
 # - If the context does not contain relevant information, respond with "I don't have enough information to answer that question."
@@ -62,7 +63,7 @@ ChatAgent = Agent(
 
 ## Notes & Integration
 
-- Ensure environment variables or `Default` constants are set: `REDIS_URL`, `CORE42_API_KEY`, `CORE42_API_ENDPOINT`, and `QUERY_MODEL_NAME`.
+- Ensure environment variables or `Default` constants are set: `REDIS_URL`, `MODEL_API_KEY`, `MODEL_API_ENDPOINT`, and `QUERY_MODEL_NAME`.
 - Tune `CHAT_MEMORY_EXPIRY` according to retention policy and storage costs.
 - This example expects `agno` and the project's `src.core` modules to be importable from your runtime.
 
