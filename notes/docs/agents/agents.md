@@ -83,7 +83,7 @@ After every response, append a file summary section:
 
 ### Sample prompt 2
 
-```````shell
+``````shell
 
 ## Project Overview
 
