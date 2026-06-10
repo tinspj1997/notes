@@ -1,0 +1,10 @@
+digraph "Web Service" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Web Service" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	"299760c8eee54fa3850db81df3755d88" [label=lb height=1.9 image="D:\Works\notes\architectures\.venv\Lib\site-packages\resources/aws/network\elastic-load-balancing.png" shape=none]
+	"4937199382114fd9b5ca2eda1dacd02a" [label=web height=1.9 image="D:\Works\notes\architectures\.venv\Lib\site-packages\resources/aws/compute\ec2.png" shape=none]
+	"299760c8eee54fa3850db81df3755d88" -> "4937199382114fd9b5ca2eda1dacd02a" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"96825d3b8b7145fbaf34e01ffe591f02" [label=userdb height=1.9 image="D:\Works\notes\architectures\.venv\Lib\site-packages\resources/aws/database\rds.png" shape=none]
+	"4937199382114fd9b5ca2eda1dacd02a" -> "96825d3b8b7145fbaf34e01ffe591f02" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}
