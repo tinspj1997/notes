@@ -1,4 +1,4 @@
 site/
 .venv
-.png
-.jpg
+*.png
+*.jpg
