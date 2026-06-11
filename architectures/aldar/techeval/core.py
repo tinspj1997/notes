@@ -17,10 +17,7 @@ with Diagram(
     show=True,
     direction="TB",
     graph_attr={
-        "splines": "ortho",
-        "nodesep": "1.0",
-        "ranksep": "1.2",
-        "pad": "0.5",
+        "fontname": "Arial Bold"
     },
 ):
     # ==========================================
@@ -49,18 +46,12 @@ with Diagram(
     # RFP Worker
     # ==========================================
     with Cluster("RFP Worker"):
-        RFPworker = Custom("RFP Worker", stack_icon)
-        rfp_embedding_1 = Lambda("Embedding")
-        rfp_extractor_1 = Lambda("Extractor")
-        rfp_downloader_1 = Lambda("Downloader")
+        RFPDownloader = Custom("RFP Downloader", stack_icon)
+        RFPExtractor = Custom("< &nbsp; <B>RFP Extractor</B>>", stack_icon)
+        rfp_worker = Lambda("\nDownloader\nExtractor\nEmbedding")
+       
 
-    # ==========================================
-    # RFP Worker N
-    # ==========================================
-    with Cluster("RFP Worker N"):
-        rfp_embedding_n = Lambda("Embedding")
-        rfp_extractor_n = Lambda("Extractor")
-        rfp_downloader_n = Lambda("Downloader")
+    
 
     # ==========================================
     # Evaluation Worker
@@ -68,19 +59,14 @@ with Diagram(
     with Cluster("Evaluation Worker"):
         eval_embedding = Lambda("Embedding")
         eval_extractor = Lambda("Extractor")
-        eval_downloader = Lambda("Downloader")
+        eval_downloader = Lambda("<<B>Downloader</B>>")
 
     # ==========================================
     # RFP Queue Connections
     # ==========================================
-    rfp_queue >> rfp_embedding_1
-    rfp_queue >> rfp_extractor_1
-    rfp_queue >> rfp_downloader_1
-
-    rfp_queue >> rfp_embedding_n
-    rfp_queue >> rfp_extractor_n
-    rfp_queue >> rfp_downloader_n
-
+    rfp_queue >> RFPDownloader
+    rfp_queue >> RFPExtractor
+    rfp_worker >> Edge(style="dashed") >> queue_state
     # ==========================================
     # Evaluation Queue Connections
     # ==========================================
